@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/light_gray"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/primeiro"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/circle_white"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+        <Spinner
+            android:id="@+id/spnType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/SpinnerStyle">
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/segundo"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/primeiro"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:background="@drawable/circle_white"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="Selecione a prioridade:"
+            android:layout_marginEnd="10dp"/>
+
+        <RadioGroup android:id="@+id/radioPriority"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/chkAmarelo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/yellow"
+                android:textSize="14sp"
+                android:checked="true"
+                android:button="@drawable/radio_button"
+                android:background="@drawable/radio_button_yellow"
+                android:layout_marginEnd="10dp"/>
+
+            <RadioButton
+                android:id="@+id/chkVermelho"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/red"
+                android:textSize="14sp"
+                android:button="@drawable/radio_button"
+                android:background="@drawable/radio_button_red" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terceiro"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/segundo"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/txtLine"
+            android:background="@drawable/circle_white"
+            android:gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="3"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"/>
+
+        <Spinner
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            style="@style/SpinnerStyle"
+            android:layout_marginEnd="10dp">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/txtStation"
+            android:background="@drawable/circle_white"
+            android:gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="4"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"/>
+
+        <Spinner
+            android:id="@+id/station"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            style="@style/SpinnerStyle">
+        </Spinner>
+    </LinearLayout>
+
+    <!--
+    <Button
+        android:layout_below="@+id/terceiro"
+        android:id="@+id/btnCancelSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Cancelar"
+        android:background="@drawable/btn_cancel_bg"
+        android:layout_toStartOf="@+id/btnSubmitLayout"
+        android:layout_marginEnd="10dp"/>-->
+
+    <LinearLayout android:id="@+id/btnSubmitLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/terceiro"
+        android:background="@color/blue"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/btn_submit_bg"
+            android:text="5"
+            android:textColor="@color/blue"/>
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Registrar"
+            android:background="@color/blue"/>
+    </LinearLayout>
+
+</RelativeLayout>

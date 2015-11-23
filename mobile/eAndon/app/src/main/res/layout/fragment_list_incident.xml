@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#eaecee">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Id"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                   />
+
+                <TextView
+                    android:text="Tipo"
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                   />
+
+                <TextView
+                    android:text="Linha"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    />
+
+                <TextView
+                    android:text="Estação"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    />
+
+                <TextView
+                    android:text="Tempo"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                  />
+
+            </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvListIncident"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </ListView>
+    </LinearLayout>
+</LinearLayout>

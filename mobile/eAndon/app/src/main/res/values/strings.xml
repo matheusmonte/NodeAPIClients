@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">eAndon</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="yellow">AMARELO</string>
+    <string name="red">VERMELHO</string>
+
+    <string name="id">ID</string>
+    <string name="type">TIPO</string>
+    <string name="line">LINHA</string>
+    <string name="station">ESTAÇÃO</string>
+    <string name="open">ABERTO</string>
+    <string name="closed">FECHADO</string>
+</resources>

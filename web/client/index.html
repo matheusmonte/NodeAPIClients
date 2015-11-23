@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="andon">
+<head>
+  <link rel="stylesheet" href="libs/bootstrap.min.css"><!--3.3.5-->
+  <link rel="stylesheet" href="libs/bootstrap-theme.min.css">
+  <style>
+  @-moz-document url-prefix() {
+    fieldset { display: table-cell; }
+  }
+  </style>
+  <script type="text/javascript" src="libs/angular.min.js"></script><!--1.4.6-->
+  <script type="text/javascript" src="libs/angular-route.min.js"></script>
+  <script type="text/javascript" src="script/index.js"></script>
+  <title>E.AndOn</title>
+</head>
+  <body>
+    <div class="container" ng-controller="incidentListCtrl">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+              <th>Status</th>
+                <th>Type</th>
+                <th>Priority</th>
+                <th>Line</th>
+                <th>Station</th>
+                <th>Response Time</th>
+                <th>Operator Create</th>
+                <th>Date Create</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="incident in incidents">
+          <td>{{incident.status}}</td>
+            <td>{{incident.type}}</td>
+            <td ng-init = "setPriority(incident)">{{incident.priority}}</td>
+            <td>{{incident.adress.line}}</td>
+            <td>{{incident.adress.station}}</td>       
+            <td ng-init = "setRegressiveTime(incident)">{{incident.regressiveTime | date:'HH:mm:ss':'-0400'}}</td>
+            <td>{{incident.operatorCreate}}</td>
+            <td>{{incident.dateHourCreate}}</td>
+          </tr>
+        </table>
+        <span>{{mensagemErro}}</span>
+      </div>
+    </div>
+  </body>
+</html>
